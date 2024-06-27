@@ -18,6 +18,26 @@ img {
 /*colore sfondo aside #000000*/
 /*HEAder*/
 
+/*ASIDE*/
+
+.aside-container {
+    
+    height: calc(100vh - 100px);
+}
+.aside-nav {
+    padding: 70px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.aside-nav > * {
+    color: lightgray;
+}
+.sub-header {
+    height: 200px;
+}
+.playlist {
+    height: 520px;
+}
 
 /*MAIN*/
 body {
@@ -187,11 +207,12 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10px;
+    padding: 10px;
 }
 .footer-left {
     display: flex;
     align-items: center;
+    width: 30%;
 }
 .footer-left div img {
     height: 60px;
@@ -217,6 +238,7 @@ footer {
 }
 .footer-center {
     text-align: center;
+    width: 40%;
 }
 .footer-center .icon-container i {
     color: lightgray;
@@ -228,7 +250,7 @@ footer {
 }
 #track-duration {
     background-color: lightgray;
-    width: 400px;
+    width: 100%;
     height: 3px;
     border-radius: 30%;
     opacity: 0.6;
@@ -244,7 +266,9 @@ footer {
 }
 .footer-right {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    width: 30%;
 }
 .volume {
     position: relative;
