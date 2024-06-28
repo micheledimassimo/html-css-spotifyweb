@@ -16,27 +16,42 @@ img {
 /*General*/
 /*colore sfondo main #141922*/
 /*colore sfondo aside #000000*/
-/*HEAder*/
+
 
 /*ASIDE*/
-
-.aside-container {
-    
+section {
     height: calc(100vh - 100px);
 }
+.aside-container {
+    
+    min-height: 400px;
+}
 .aside-nav {
-    padding: 70px 10px;
-    display: flex;
-    flex-direction: column;
+    
+    
+    padding: 10px;
+    height: 100%;
+}
+.logo-container > img {
+    height: 50px;
+    object-fit: cover;   
+    margin-bottom: 20px;
 }
 .aside-nav > * {
     color: lightgray;
 }
 .sub-header {
-    height: 200px;
+    height: 150px;
 }
 .playlist {
-    height: 520px;
+    height: calc(100% - 200px);
+    overflow: auto;
+}
+.user {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 /*MAIN*/
@@ -44,7 +59,15 @@ body {
     background-color: #141922;
 }
 header {
-    width: 100%;
+    width: calc(100% - 200px);
+    background-color: #080B12;
+    opacity: 0.8;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    position: fixed;
+    right: 20px;
+    z-index: 0;
 }
 .my-btn {
     padding: 12px 30px;
@@ -55,20 +78,9 @@ header {
     text-transform: uppercase;
 }
 .logo-container {
-    background-color: #080B12;
-    opacity: 0.8;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    
 }
-.logo-container > div > img {
-    height: 45px;
-    object-fit: cover;   
-}
+
 .big-container {
     width: 100%;
     height: calc(100vh - 100px);
@@ -78,8 +90,7 @@ header {
 .aside-nav {
     background-color: #000000;
     width: 200px;
-    top: 0;
-    bottom: 0;
+
 }
 .main-container {
     left: 10%;
@@ -148,6 +159,7 @@ header {
     margin-bottom: 25px;
     position: relative;
     flex-shrink: 0;
+    z-index: 0;
 }
 .song-card img {
     flex-shrink: 0;
@@ -246,23 +258,26 @@ footer {
 }
 .track {
     position: relative;
-    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #track-duration {
     background-color: lightgray;
-    width: 100%;
+    width: 80%;
     height: 3px;
     border-radius: 30%;
     opacity: 0.6;
 }
 #track-played {
-    background-color: rgb(204, 193, 193);
-    width: 100px;
+    background-color: white;
+    width: 50%;
     height: 3px;
     border-radius: 30%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 44%;
+    left: 10%;
 }
 .footer-right {
     display: flex;
