@@ -27,9 +27,10 @@ section {
     min-height: 400px;
 }
 .aside-nav {
+    display: flex;
+    flex-direction: column;
     
-    
-    padding: 10px;
+    padding: 12px;
     height: 100%;
 }
 .logo-container > img {
@@ -37,23 +38,65 @@ section {
     object-fit: cover;   
     margin-bottom: 20px;
 }
+.small-logo {
+    display: none;
+}
+.small-logo img{
+    height: 35px;
+    object-fit: cover;
+}
 .aside-nav > * {
     color: lightgray;
 }
-.sub-header {
-    height: 150px;
+
+.sub-header p {
+    margin-top: 10px;
+    opacity: 0.7;
 }
-.playlist {
-    height: calc(100% - 200px);
-    overflow: auto;
-}
-.user {
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.sub-header p a {
+    text-decoration: none;
+    color: lightgray;
+    vertical-align: middle;
+    
 }
 
+.playlist {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.playlist h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.playlist a {
+    text-decoration: none;
+    color: lightgray;
+    opacity: 0.7;
+}
+.playlist nav ul li a {
+    text-decoration: none;
+    color: lightgray;
+    opacity: 0.7;
+}
+.playlist nav ul {
+    list-style: none;
+
+}
+.playlist nav ul li {
+    padding: 5px 0;
+}
+.user p {
+    margin: 5px 0;
+    opacity: 0.7;
+}
+#username {
+    font-weight: bold;
+}
 /*MAIN*/
 body {
     background-color: #141922;
@@ -67,7 +110,7 @@ header {
     padding: 10px;
     position: fixed;
     right: 20px;
-    z-index: 0;
+    z-index: 1;
 }
 .my-btn {
     padding: 12px 30px;
@@ -141,9 +184,9 @@ header {
 }
 .recently-played h2 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: white;
-    padding: 20px 0 50px;
+    padding: 30px 0 20px;
 }
 .my-row {
     display: flex;
@@ -155,7 +198,7 @@ header {
 .song-card {
     color: white;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 15px;
     margin-bottom: 25px;
     position: relative;
     flex-shrink: 0;
@@ -195,7 +238,7 @@ header {
     margin-top: 5px;
 }
 .song-card p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: lightgray;
     opacity: 0.8;
     margin-top: 5px;
@@ -204,6 +247,10 @@ header {
  .circle-card img {
     border-radius: 50%;
     
+ }
+ .sub-titles {
+    color: lightgray;
+    margin: 20px 0 30px;
  }
 /*FOOTER*/
 footer {
@@ -263,6 +310,9 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+.track span {
+    color: lightgray;
+}
 #track-duration {
     background-color: lightgray;
     width: 80%;
@@ -306,4 +356,25 @@ footer {
     left: 0;
 }
 
+
 /*MEDIAQUERY*/
+
+@media screen and (max-width: 1100px) {
+    
+}
+
+@media screen and (max-width: 700px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-display {
+        display: none;
+    }
+    .small-logo {
+        display: block;
+    }
+    .aside-nav {
+        width: 70px;
+    }
+}
