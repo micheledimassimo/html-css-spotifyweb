@@ -119,6 +119,11 @@ header {
     color: white;
     border: 1px solid white;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: 1s;
+}
+.my-btn:hover {
+    padding: 30px 50px;
 }
 .logo-container {
     
@@ -171,7 +176,7 @@ header {
     width: 45px;
     height: 2px;
     margin: 5px 0 ;
-    background-color: lime;
+    background-color: greenyellow;
     border: 0;
     position: absolute;
     left: 32%;
@@ -222,9 +227,9 @@ header {
 .song-card > i {
     opacity: 0;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
-    translate: -50% -50%;
+    transform: translate(-50%);
     z-index: 1;
     
 }
@@ -332,6 +337,9 @@ footer {
     position: absolute;
     top: 44%;
     left: 10%;
+}
+#track-played:hover {
+    background-color: greenyellow;
 }
 .footer-right {
     display: flex;
